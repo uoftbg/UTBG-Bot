@@ -1,0 +1,16 @@
+{
+  "Essential Commands": {
+    "/setup": "Instructions on setting up the bot",
+    "/follow": "Receive tweets from a user",
+    "/unfollow": "Stop receiving tweets from a user",
+    "/get-follows": "Show all followed users and their settings",
+    "/unfollow-all": "Stop receiving tweets from all users"
+  },
+  "Webhook Commands": {
+    "/set-webhook": "Set the webhook where tweets will be received",
+    "/remove-webhook": "Removes the webhook where tweets are received"
+  },
+  "Other Commands": {
+    "/ping": "Pong! Tests the bots response time"
+  }
+}

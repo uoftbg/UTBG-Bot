@@ -1,0 +1,30 @@
+{
+  "Basics": {
+    "/follow": "Run this command to receive tweets from a user! You can set the bot to ping @everyone, just you, or noone.\nYou may run this command in any channel!",
+    "/unfollow": "Run this command to receiving tweets from one specific user.",
+    "/get-follows": "Show all followed users and their settings. To change the settings, run /unfollow, then /follow again!",
+    "/unfollow-all": "If you ever want to stop getting tweets altogether, this command will do it for you!"
+  },
+  "Setting up messages": {
+    "/set-webhook": "This is where you can choose which channel you want the tweets to appear in! Tutorial for this is coming up!",
+    "/remove-webhook": "If you want to remove the webhook, this is the command to run."
+  },
+  "Other": {
+    "Message visibility": "All the previously mentioned commands will only appear for you, meaning that others in your server won't be notified while you are configuring this bot."
+  },
+  "Setup (1)": {
+    "First, navigate to server settings by clicking your server name on the top left.": "https://i.ibb.co/VJYgzXX/1.png"
+  },
+  "Setup (2)": {
+    "Next, click the Integrations button on the menu bar.": "https://i.ibb.co/RNMfSbq/2.png"
+  },
+  "Setup (3)": {
+    "You should see this menu, click view webhooks.": "https://i.ibb.co/9Y8tKQY/3.png"
+  },
+  "Setup (4)": {
+    "Finally, you can add a name for the webhook, and select the channel you would like to receive tweets in.": "https://i.ibb.co/0hD2cNb/4.png"
+  },
+  "Setup (5)": {
+    "You're all set!": "You can now run /follow to start receiving tweets!"
+  }
+}
