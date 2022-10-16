@@ -63,7 +63,7 @@ async def send_webhook(embed, avatar_url, guild_id, screen_name,
 
     async with aiohttp.ClientSession() as session:
         try:
-            url = webhooks_dict[guild_id]
+            url = webhooks_dict[str(guild_id)]
         except KeyError:
             pass
         else:

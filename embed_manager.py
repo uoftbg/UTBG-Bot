@@ -43,6 +43,27 @@ def create_setup_embed(page_num=0, inline=False):
     return embed
 
 
+def create_instagram_embed(caption, media_urls, author_name, author_url, author_icon_url, page_num=0):
+    page_num = page_num % len(media_urls)
+
+    embed = Embed(title='',
+                  url = "",
+                  description=caption,
+                  color=nextcord.Color.dark_magenta()
+                  )
+
+    embed.set_author(name=author_name,
+                     url=author_url,
+                     icon_url=author_icon_url)
+
+    embed.set_image(media_urls[page_num])
+
+    embed.set_footer(
+        text=f"Page {page_num + 1} of {len(media_urls)}")
+
+    return embed
+
+
 def create_help_embed(page_num=0, inline=False):
     help_dict = file_manager.load('json/help.json')
 

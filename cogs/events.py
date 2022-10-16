@@ -1,8 +1,12 @@
+import time
+
 import nextcord
 from nextcord.ext import commands
 
 import settings_controller
 from cogs.loops import Loops
+
+from instagrapi import Client
 
 
 class Events(commands.Cog):
@@ -12,16 +16,27 @@ class Events(commands.Cog):
 
     @commands.Cog.listener()
     async def on_ready(self):
+        cl = Client()
+        cl.login('', '')
         print(f'Ready {self.bot.user}')
-        try:
+
+        while True:
+            # try:
             await self.bot.change_presence(
                 activity=nextcord.Activity(
                     type=nextcord.ActivityType.playing,
                     name='use /help or /setup to get started')
             )
-            await Loops.twitter_notifier.start(self)
-        except RuntimeError:
-            pass
+            l = Loops(self.bot)
+
+            while True:
+                print('running instagram')
+                await l.instagram_notifier(client=cl)
+                print('running twitter')
+                await l.twitter_notifier()
+                time.sleep(10)
+            # except RuntimeError:
+            #     pass
 
     @commands.Cog.listener()
     async def on_guild_join(self, guild):
